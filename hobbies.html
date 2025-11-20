@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="container header-container">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="about.html" class="btn">About Me</a></li>
+        <li><a href="skills.html" class="btn">Skills</a></li>
+        <li><a href="hobbies.html" class="btn">Hobbies</a></li>
+        <li><a href="contact.html" class="btn">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="logo btn" href="index.html">Home</a>
+  </div>
+</header>
+
+
+  <!-- Hobbies Section -->
+  <section class="hobbies">
+    <div class="container hobbies-container">
+
+      <!-- Hobbies Section -->
+<section class="hobbies">
+  <div class="container hobbies-container">
+
+    <div class="hobby-card">
+      <h3>Sports</h3>
+      <p>I enjoy playing basketball, volleyball, running, and boxing. Staying active keeps me energized and focused.</p>
+    </div>
+
+    <div class="hobby-card">
+      <h3>Reading Minds</h3>
+      <p>I often observe the environment around me and sense the energy of people. It helps me understand situations better.</p>
+    </div>
+
+    <div class="hobby-card">
+      <h3>Music</h3>
+      <p>Listening to music, playing instruments, and singing is my favorite way to relax when I’m alone.</p>
+    </div>
+
+    <div class="hobby-card">
+      <h3>Sleeping</h3>
+      <p>I truly enjoy rest and relaxation. Sleep recharges my mind and body for better performance.</p>
+    </div>
+
+    <div class="hobby-card">
+      <h3>Gaming</h3>
+      <p>Playing games like Mobile Legends with friends is always fun and a great way to connect and strategize.</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Fade Out Transition Script -->
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      if (link.hostname === window.location.hostname) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const href = this.href;
+          document.body.style.opacity = 0;
+          setTimeout(() => { window.location.href = href; }, 300);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

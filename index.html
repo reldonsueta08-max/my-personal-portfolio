@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <header class="site-header">
+  <div class="container header-container">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="about.html" class="btn">About Me</a></li>
+        <li><a href="skills.html" class="btn">Skills</a></li>
+        <li><a href="hobbies.html" class="btn">Hobbies</a></li>
+        <li><a href="contact.html" class="btn">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="logo btn" href="index.html">Home</a>
+  </div>
+</header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Reldon</span>,</h1>
+      <h1> and welcome to my personal portfolio.</h1>
+      <p>A small info about me ^_____^ </p>
+      <a href="about.html" class="btn">Learn more</a>
+    </div>
+
+    <!-- Small background photo container -->
+     <section class="hero">
+        <div class="image-box">
+            <img sizes="15" src="images/abs.webp" alt="Portfolio Image" />
+        </div>
+
+
+  <!-- FADE OUT TRANSITION SCRIPT -->
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      if (link.hostname === window.location.hostname) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const href = this.href;
+          document.body.style.opacity = 0;
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
+

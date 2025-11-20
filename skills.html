@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="container header-container">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="about.html" class="btn">About Me</a></li>
+        <li><a href="skills.html" class="btn">Skills</a></li>
+        <li><a href="hobbies.html" class="btn">Hobbies</a></li>
+        <li><a href="contact.html" class="btn">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="logo btn" href="index.html">Home</a>
+  </div>
+</header>
+
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <div class="container skills-container">
+
+     <!-- Skills Section -->
+<section class="skills">
+  <div class="container skills-container">
+
+    <div class="skill-card">
+      <h3>Emotional Skills</h3>
+      <p>Understanding and managing emotions effectively in personal and professional life.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Sporty</h3>
+      <p>Staying active, disciplined, and energetic through sports and fitness activities.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Friendly</h3>
+      <p>Building positive relationships and being approachable, kind, and supportive.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Focus</h3>
+      <p>Maintaining attention and concentration to achieve goals efficiently.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Teamwork</h3>
+      <p>Collaborating effectively with others to achieve common objectives.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Creativity</h3>
+      <p>Thinking outside the box and finding innovative solutions to challenges.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Communication</h3>
+      <p>Expressing ideas clearly and listening actively to others.</p>
+    </div>
+
+    <div class="skill-card">
+      <h3>Adaptability</h3>
+      <p>Adjusting to change and handling new situations with ease.</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Fade Out Transition Script -->
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      if (link.hostname === window.location.hostname) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const href = this.href;
+          document.body.style.opacity = 0;
+          setTimeout(() => { window.location.href = href; }, 300);
+        });
+      }
+    });
+
+    // Animate Circular Progress on Scroll
+    const circles = document.querySelectorAll('.progress-circle');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const circle = entry.target;
+          const progress = circle.getAttribute('data-progress');
+          circle.style.background = `conic-gradient(#4d79ff 0deg, #4d79ff ${progress*3.6}deg, rgba(255,255,255,0.1) ${progress*3.6}deg)`;
+        }
+      });
+    }, { threshold: 0.5 });
+
+    circles.forEach(circle => observer.observe(circle));
+  </script>
+
+</body>
+</html>
