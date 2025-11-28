@@ -6,10 +6,12 @@
   <title>Skills</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="site-header">
-  <div class="container header-container">
+<header class="site-header">
+  <div class="header-container">
+
     <nav class="main-nav">
       <ul>
         <li><a href="about.html" class="btn">About Me</a></li>
@@ -18,18 +20,17 @@
         <li><a href="contact.html" class="btn">Contact</a></li>
       </ul>
     </nav>
-    <a class="logo btn" href="index.html">Home</a>
+
+    <a class="logo premium-btn" href="index.html">Home</a>
+
   </div>
 </header>
 
-
-  <!-- Skills Section -->
-  <section class="skills">
-    <div class="container skills-container">
-
-     <!-- Skills Section -->
+<!-- Skills Section -->
 <section class="skills">
-  <div class="container skills-container">
+  <h1 class="skills-title">My Skills</h1>
+
+  <div class="skills-container">
 
     <div class="skill-card">
       <h3>Emotional Skills</h3>
@@ -73,35 +74,25 @@
 
   </div>
 </section>
+<footer class="skills-footer">
+  <div class="footer-overlay">
+    <p>© 2025 Reldon | All Rights Reserved</p>
+  </div>
+</footer>
 
-
-  <!-- Fade Out Transition Script -->
-  <script>
-    document.querySelectorAll('a').forEach(link => {
-      if (link.hostname === window.location.hostname) {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const href = this.href;
-          document.body.style.opacity = 0;
-          setTimeout(() => { window.location.href = href; }, 300);
-        });
-      }
-    });
-
-    // Animate Circular Progress on Scroll
-    const circles = document.querySelectorAll('.progress-circle');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          const circle = entry.target;
-          const progress = circle.getAttribute('data-progress');
-          circle.style.background = `conic-gradient(#4d79ff 0deg, #4d79ff ${progress*3.6}deg, rgba(255,255,255,0.1) ${progress*3.6}deg)`;
-        }
+<!-- Fade-Out Transition -->
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    if (link.hostname === window.location.hostname) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.href;
+        document.body.style.opacity = 0;
+        setTimeout(() => { window.location.href = href; }, 300);
       });
-    }, { threshold: 0.5 });
-
-    circles.forEach(circle => observer.observe(circle));
-  </script>
+    }
+  });
+</script>
 
 </body>
 </html>

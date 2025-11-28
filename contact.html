@@ -6,10 +6,12 @@
   <title>Contact</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="site-header">
-  <div class="container header-container">
+<header class="site-header">
+  <div class="header-container">
+
     <nav class="main-nav">
       <ul>
         <li><a href="about.html" class="btn">About Me</a></li>
@@ -18,54 +20,64 @@
         <li><a href="contact.html" class="btn">Contact</a></li>
       </ul>
     </nav>
-    <a class="logo btn" href="index.html">Home</a>
+
+    <a class="logo premium-btn" href="index.html">Home</a>
+
   </div>
 </header>
 
 
-  <!-- Contact Section -->
+<!-- Contact Section -->
 <section class="contact">
-  <div class="container contact-container">
+  <h1 class="contact-title">Contact <span>Me</span></h1>
+
+  <div class="contact-container">
 
     <div class="contact-card">
-      <h1>Contact <span>Me</span></h1>
-      <p>Have questions or want to work together? Send me a message or reach out through my social links!</p>
+      <p class="contact-desc">
+        Have questions or want to work together? Send me a message or reach out through my social links.
+      </p>
 
       <!-- Contact Info -->
       <div class="contact-info">
-        <p>📞 Phone: 09484954679</p>
-        <p>✉️ Email: reldonsueta08@email.com</p>
-        <p>🌐 Facebook: <a href="https://www.facebook.com/" target="_blank">Facebook</a></p>
-        <p>📸 Instagram: <a href="https://www.instagram.com/direct/inbox/?hl=en&__coig_login=1" target="_blank">Instagram</a></p>
+        <p>📞 Phone: <strong>09484954679</strong></p>
+        <p>✉️ Email: <strong>reldonsueta08@email.com</strong></p>
+        <p>🌐 Facebook: <a href="https://www.facebook.com/" target="_blank">Visit Profile</a></p>
+        <p>📸 Instagram: <a href="https://www.instagram.com/" target="_blank">Visit Profile</a></p>
       </div>
 
       <!-- Contact Form -->
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn send-btn">Send Message</button>
       </form>
-
     </div>
 
   </div>
 </section>
 
+<!-- Footer Background -->
+<footer class="skills-footer">
+  <div class="footer-overlay">
+    <p>© 2025 Reldon | All Rights Reserved</p>
+  </div>
+</footer>
 
-  <!-- Fade Out Transition Script -->
-  <script>
-    document.querySelectorAll('a').forEach(link => {
-      if (link.hostname === window.location.hostname) {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const href = this.href;
-          document.body.style.opacity = 0;
-          setTimeout(() => { window.location.href = href; }, 300);
-        });
-      }
-    });
-  </script>
+<!-- Fade Transition Script -->
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    if (link.hostname === window.location.hostname) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.href;
+        document.body.style.opacity = 0;
+        setTimeout(() => { window.location.href = href; }, 300);
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

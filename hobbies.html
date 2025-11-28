@@ -6,10 +6,12 @@
   <title>Hobbies</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="site-header">
-  <div class="container header-container">
+<header class="site-header">
+  <div class="header-container">
+
     <nav class="main-nav">
       <ul>
         <li><a href="about.html" class="btn">About Me</a></li>
@@ -18,18 +20,18 @@
         <li><a href="contact.html" class="btn">Contact</a></li>
       </ul>
     </nav>
-    <a class="logo btn" href="index.html">Home</a>
+
+    <a class="logo premium-btn" href="index.html">Home</a>
+
   </div>
 </header>
 
 
-  <!-- Hobbies Section -->
-  <section class="hobbies">
-    <div class="container hobbies-container">
-
-      <!-- Hobbies Section -->
+<!-- Hobbies Section -->
 <section class="hobbies">
-  <div class="container hobbies-container">
+  <h1 class="hobbies-title">My Hobbies</h1>
+
+  <div class="hobbies-container">
 
     <div class="hobby-card">
       <h3>Sports</h3>
@@ -59,19 +61,26 @@
   </div>
 </section>
 
-  <!-- Fade Out Transition Script -->
-  <script>
-    document.querySelectorAll('a').forEach(link => {
-      if (link.hostname === window.location.hostname) {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const href = this.href;
-          document.body.style.opacity = 0;
-          setTimeout(() => { window.location.href = href; }, 300);
-        });
-      }
-    });
-  </script>
+<!-- FOOTER WITH BACKGROUND IMAGE -->
+<footer class="skills-footer">
+  <div class="footer-overlay">
+    <p>© 2025 Reldon | All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- Fade Out Transition Script -->
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    if (link.hostname === window.location.hostname) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.href;
+        document.body.style.opacity = 0;
+        setTimeout(() => { window.location.href = href; }, 300);
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
